@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         images = Utils.getAllShownImagesPath(this);
+        imageAdapter.setWithScreen(Utils.getWidthScreen(this));
         imageAdapter.setData(images);
     }
 

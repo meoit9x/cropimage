@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.util.DisplayMetrics;
 
 import androidx.core.app.ActivityCompat;
 
@@ -52,6 +53,14 @@ public class Utils {
         else {
             return true;
         }
+    }
+
+    public static int getWidthScreen(Activity activity) {
+        if (activity == null)
+            return 0;
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.widthPixels;
     }
 
 }

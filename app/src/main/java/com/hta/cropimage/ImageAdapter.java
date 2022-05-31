@@ -17,6 +17,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     private Context context;
     private ArrayList<String> images = new ArrayList<>();
+    private int withScreen = 0;
 
     public ImageAdapter(Context context) {
         this.context = context;
@@ -25,6 +26,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public void setData(ArrayList<String> data){
         images = data;
         notifyDataSetChanged();
+    }
+
+    public void setWithScreen(int withScreen) {
+        this.withScreen = withScreen;
     }
 
     @NonNull
